@@ -1,0 +1,92 @@
+/* Variables de color: cambiar el tema = cambiar solo estas líneas */
+:root {
+  --bg: #ffffff;
+  --texto: #1a1a2e;
+  --suave: #5c5c7a;
+  --acento: #4f46e5;
+  --tarjeta: #f4f4fb;
+  --borde: #e2e2ef;
+}
+
+/* El navegador aplica modo oscuro si el sistema del usuario lo usa */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #0f0f1a;
+    --texto: #ececf5;
+    --suave: #a0a0bd;
+    --acento: #818cf8;
+    --tarjeta: #181828;
+    --borde: #2a2a40;
+  }
+}
+
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+
+body {
+  margin: 0;
+  font-family: system-ui, -apple-system, "Segoe UI", sans-serif;
+  background: var(--bg);
+  color: var(--texto);
+  line-height: 1.6;
+}
+
+main, .hero { max-width: 900px; margin: 0 auto; padding: 0 1.5rem; }
+section { padding: 3rem 0 1rem; }
+h3 { font-size: 1.6rem; margin-bottom: 1rem; }
+
+.hero { padding-top: 6rem; padding-bottom: 3rem; }
+.hero h1 { font-size: clamp(2.5rem, 8vw, 4.5rem); margin: 0; }
+.hero h2 { color: var(--acento); font-weight: 600; margin: 0.25rem 0 1rem; }
+.hero__saludo { color: var(--suave); margin: 0; }
+.hero__bio { max-width: 560px; color: var(--suave); }
+
+.btn {
+  display: inline-block;
+  background: var(--acento);
+  color: #fff;
+  border: 0;
+  margin: 1em;
+  padding: 0.7rem 1.4rem;
+  border-radius: 8px;
+  font-size: 1rem;
+  cursor: pointer;
+  text-decoration: none;
+}
+.btn:hover { opacity: 0.9; }
+
+.chips { display: flex; flex-wrap: wrap; gap: 0.5rem; list-style: none; padding: 0; }
+.chip {
+  background: var(--tarjeta);
+  border: 1px solid var(--borde);
+  padding: 0.3rem 0.8rem;
+  border-radius: 999px;
+}
+.chip--chico { font-size: 0.8rem; padding: 0.15rem 0.6rem; }
+
+/* auto-fit: las tarjetas se acomodan solas en móvil y escritorio */
+.grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 1rem; }
+.card {
+  background: var(--tarjeta);
+  border: 1px solid var(--borde);
+  border-radius: 12px;
+  padding: 1.25rem;
+}
+.card h4 { margin: 0 0 0.5rem; font-size: 1.2rem; }
+.card p { color: var(--suave); }
+.card__links { display: flex; gap: 1rem; }
+a { color: var(--acento); }
+
+.form { display: grid; gap: 0.75rem; max-width: 520px; }
+.form input, .form textarea {
+  padding: 0.7rem;
+  border-radius: 8px;
+  border: 1px solid var(--borde);
+  background: var(--tarjeta);
+  color: var(--texto);
+  font: inherit;
+}
+.form button { justify-self: start; }
+.redes { margin-top: 1.5rem; }
+
+footer { text-align: center; color: var(--suave); padding: 3rem 0 2rem; }
