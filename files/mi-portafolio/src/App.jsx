@@ -54,7 +54,7 @@ const PROYECTOS = [
   {
     id: 4,
     titulo: "API Rest para e-commerce",
-    descripcion: "API REST para e-commerce construida con un stack robusto y desplegada en producción.",
+    descripcion: "API REST para e-commerce construida con un stack robusto y desplegada en producción (PowerGym API Rest).",
     tecnologias: [
       "NestJS", "TypeORM", "PostgreSQL", "JWT", "Cloudinary", "Swagger / OpenAPI", "Jest", "Docker", "GitHub Actions"
     ],
@@ -66,7 +66,7 @@ const PROYECTOS = [
     titulo: "FTecommerce",
     descripcion: "Esta es una API construida con Nest para Fix It Ecommerce",
     tecnologias: [
-      "TypeORM", "NodeJS",
+      "TypeScript", "NestJS", "PostgreSQL", "TypeORM", "NodeJS", "JWT", "Swagger", "pgAdmin", "Jest", "Docker", "GitHub Actions"
     ],
     repo: "https://github.com/GNicolasRocca/FTecommerce",
     demo: "linkedin.com/safety/go/?url=https%3A%2F%2Fnest-demo-latest-8yd5.onrender.com%2Fapi&urlhash=pi2r&mt=Pqidn8uj5aHFKr7S3a5iFhf-bvryiB6UcaB9RepUe3nG9F5hsuvObG6BTDWDKSVeahug-Fp1b1GDc6vVvO6saYMUjCRZ&isSdui=true&lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base%3B77svcWi%2BQsuN4GkNrEWyFQ%3D%3D",
