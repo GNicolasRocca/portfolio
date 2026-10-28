@@ -75,7 +75,7 @@ h3 { font-size: 1.6rem; margin-bottom: 1rem; }
 }
 .card h4 { margin: 0 0 0.5rem; font-size: 1.2rem; }
 .card p { color: var(--suave); }
-.card__links { display: flex; gap: 1rem; }
+.card__links { display: flex; justify-content: center; gap: 1rem; }
 a { color: var(--acento); }
 
 #contacto {
@@ -103,3 +103,36 @@ a { color: var(--acento); }
 .redes { margin-top: 1.5rem; }
 
 footer { text-align: center; color: var(--suave); padding: 3rem 0 2rem; }
+
+/* Menú desplegable de repos: el contenedor es "relative" para que el menú
+   se posicione respecto al botón y no respecto a la página entera */
+.dropdown { position: relative; }
+.dropdown__boton {
+  background: none;
+  border: 0;
+  padding: 0;
+  font: inherit;
+  color: var(--acento);
+  text-decoration: underline;
+  cursor: pointer;
+}
+.dropdown__menu {
+  position: absolute;
+  bottom: 100%; /* se abre hacia arriba para no quedar cortado por el borde de la tarjeta */
+  left: 0;
+  margin: 0 0 0.4rem;
+  padding: 0.3rem 0;
+  list-style: none;
+  min-width: 140px;
+  background: var(--bg);
+  border: 1px solid var(--borde);
+  border-radius: 8px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.15);
+  z-index: 10;
+}
+.dropdown__menu a {
+  display: block;
+  padding: 0.45rem 0.9rem;
+  text-decoration: none;
+}
+.dropdown__menu a:hover { background: var(--tarjeta); }
