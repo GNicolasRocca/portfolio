@@ -1,11 +1,11 @@
 import { useState, useRef, useEffect } from "react";
 import "./App.css";
 
-// solo edites este arreglo y no el HTML de abajo.
 const PERFIL = {
   nombre: "Gonzalo Rocca",
   rol: "Desarrollador Web Full Stack",
-  bio: "¡Hola!, ¡soy Gonzalo Rocca! Desarrollador Back End y estudiante de Informática en la UNGS. Para enriquecer mis conocimientos, realicé una carrera de desarrollo web en Soy Henry y diferentes cursos relacionados a la informática, entre otros. En cuanto a mi experiencia en el área comercial administrativa, ha potenciado en mí un buen manejo de las relaciones interpersonales y del trabajo bajo presión, entre otras. Actualmente, me encuentro en búsqueda de mi primera experiencia en el área de desarrollo web con muchas ganas de aprender y desarrollarme profesionalmente. Me considero una persona empática, dinámica y ¡con gran voluntad para adquirir nuevos desafíos! Quedo a disposición.",
+  foto: "../public/Retrato.png",
+  bio: "¡Hola!, ¡soy Gonzalo Rocca! Desarrollador Full Stack y estudiante de Informática en la UNGS. Para enriquecer mis conocimientos, realicé una carrera de desarrollo web en Soy Henry y diferentes cursos relacionados a la informática, entre otros. En cuanto a mi experiencia en el área comercial administrativa, ha potenciado en mí un buen manejo de las relaciones interpersonales y del trabajo bajo presión, entre otras. Actualmente, me encuentro en búsqueda de mi primera experiencia en el área de desarrollo web con muchas ganas de aprender y desarrollarme profesionalmente. Me considero una persona empática, dinámica y ¡con gran voluntad para adquirir nuevos desafíos! Quedo a disposición.",
   email: "gonzalo-rocca@hotmail.com",
   github: "https://github.com/GNicolasRocca",
   linkedin: "https://www.linkedin.com/in/gonzalorocca/",
@@ -15,8 +15,6 @@ const HABILIDADES = [
   "JavaScript", "TypeScript", "Python", "NodeJS","NestJS", "MongoDB", "PostgreSQL", "TypeORM", "React", "HTML5",
   "CSS3", "Express", "Axios", "Bootstrap", "Foundation",
 ];
-
-// Centrar PERFIL, HABILIDADES, PROYECTOS
 
 const PROYECTOS = [
   {
@@ -90,6 +88,7 @@ function Encabezado() {
       <p className="hero__saludo">Hola, soy</p>
       <h1>{PERFIL.nombre}</h1>
       <h2>{PERFIL.rol}</h2>
+      <img className="hero__foto" src={PERFIL.foto} alt={`Foto de ${PERFIL.nombre}`}/>
       <p className="hero__bio">{PERFIL.bio}</p>
       <a className="btn" href="#proyectos">Ver proyectos</a>
     </header>
@@ -110,7 +109,6 @@ function Habilidades() {
   );
 }
 
-// Botón "Código" con menú desplegable para proyectos con más de un repo.
 function EnlaceRepos({ repos: todos = [] }) {
   const repos = todos.filter((r) => r.url);
   const [abierto, setAbierto] = useState(false);
