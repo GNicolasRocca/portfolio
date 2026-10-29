@@ -1,10 +1,11 @@
 import { useState, useRef, useEffect } from "react";
 import "./App.css";
+import foto_retrato from "./assets/retrato.png";
 
 const PERFIL = {
   nombre: "Gonzalo Rocca",
   rol: "Desarrollador Web Full Stack",
-  foto: "../public/Retrato.png",
+  foto: foto_retrato,
   bio: "¡Hola!, ¡soy Gonzalo Rocca! Desarrollador Full Stack y estudiante de Informática en la UNGS. Para enriquecer mis conocimientos, realicé una carrera de desarrollo web en Soy Henry y diferentes cursos relacionados a la informática, entre otros. En cuanto a mi experiencia en el área comercial administrativa, ha potenciado en mí un buen manejo de las relaciones interpersonales y del trabajo bajo presión, entre otras. Actualmente, me encuentro en búsqueda de mi primera experiencia en el área de desarrollo web con muchas ganas de aprender y desarrollarme profesionalmente. Me considero una persona empática, dinámica y ¡con gran voluntad para adquirir nuevos desafíos! Quedo a disposición.",
   email: "gonzalo-rocca@hotmail.com",
   github: "https://github.com/GNicolasRocca",
@@ -22,7 +23,7 @@ const PROYECTOS = [
     titulo: "PowerGym - Plataforma Web de Gestión de Centro de Entrenamiento",
     descripcion: "Como parte de un equipo de múltiples disciplinas, colaboré en el desarrollo de una aplicación web para gestión de un gimnasio, en autenticación de usuarios (usuario, coach o administrador) donde la funcionalidad cambia dependiendo del rol. ",
     tecnologias: [
-      "API de Swagger", "Docker", "Stripe", "TypeScript", "PostgreSQL", "GitHub Actions", "Jest",
+      "API de Swagger", "Docker", "Stripe", "TypeScript", "PostgreSQL", "GitHub Actions", "Jest", "Vercel",
       "NestJS", "TypeORM", "JSON Web Token (JWT)", "Cloudinary"
     ],
     repos: [
@@ -36,7 +37,7 @@ const PROYECTOS = [
     titulo: "Fix It",
     descripcion: "Fix It es una página web para sacar turnos de manera online para reparar equipos informáticos. Cuenta también con un sistema de usuarios, con el cual podemos ver nuestros turnos disponibles y ademas podemos modificar nuestra información personal.",
     tecnologias: [
-      "HTML", "CSS", "JavaScript", "Axios", "React", "React Router DOM", "Vite", "Styled Components"
+      "HTML", "CSS", "JavaScript", "Axios", "React", "React Router DOM", "Vite", "Styled Components", "Vercel",
     ],
     repos: [
       { etiqueta: "Backend", url: "https://github.com/GNicolasRocca/Fix-It" },
@@ -79,6 +80,17 @@ const PROYECTOS = [
       { etiqueta: "Backend", url: "https://github.com/GNicolasRocca/FTecommerce" },
     ],
     demo: "linkedin.com/safety/go/?url=https%3A%2F%2Fnest-demo-latest-8yd5.onrender.com%2Fapi&urlhash=pi2r&mt=Pqidn8uj5aHFKr7S3a5iFhf-bvryiB6UcaB9RepUe3nG9F5hsuvObG6BTDWDKSVeahug-Fp1b1GDc6vVvO6saYMUjCRZ&isSdui=true&lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base%3B77svcWi%2BQsuN4GkNrEWyFQ%3D%3D",
+  },
+  {
+    id: 6,
+    titulo: "Portafolio Personal",
+    descripcion: "Portafolio web personal donde presento mi perfil, mis habilidades y los proyectos que desarrollé. Está construido con React usando componentes reutilizables, y los datos se cargan desde arreglos, así que agregar un proyecto nuevo es tan simple como sumar un objeto a la lista. Incluye un menú desplegable para proyectos con repositorios separados de frontend y backend, formulario de contacto, diseño responsivo y modo claro/oscuro automático según la preferencia del sistema.",
+    tecnologias: [
+      "JavaScript", "React", "React Router DOM", "Vite", "NodeJS", "HTML", "CSS", "Vercel", "GitHub Actions"
+    ],
+    repos: [
+      { etiqueta: "Frontend", url: "https://github.com/GNicolasRocca/portfolio" },
+    ],
   },
 ];
 
