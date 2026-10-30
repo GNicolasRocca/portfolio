@@ -74,7 +74,6 @@ h3 { font-size: 1.6rem; margin-bottom: 1rem; }
 }
 .chip--chico { font-size: 0.8rem; padding: 0.15rem 0.6rem; }
 
-/* auto-fit: las tarjetas se acomodan solas en móvil y escritorio */
 .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 1rem; }
 .card {
   background: var(--tarjeta);
@@ -113,8 +112,6 @@ a { color: var(--acento); }
 
 footer { text-align: center; color: var(--suave); padding: 3rem 0 2rem; }
 
-/* Menú desplegable de repos: el contenedor es "relative" para que el menú
-   se posicione respecto al botón y no respecto a la página entera */
 .dropdown { position: relative; }
 .dropdown__boton {
   background: none;
@@ -127,7 +124,7 @@ footer { text-align: center; color: var(--suave); padding: 3rem 0 2rem; }
 }
 .dropdown__menu {
   position: absolute;
-  bottom: 100%; /* se abre hacia arriba para no quedar cortado por el borde de la tarjeta */
+  bottom: 100%;
   left: 0;
   margin: 0 0 0.4rem;
   padding: 0.3rem 0;

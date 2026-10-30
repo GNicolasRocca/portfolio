@@ -112,7 +112,6 @@ function Habilidades() {
     <section id="habilidades">
       <h3>Habilidades</h3>
       <ul className="chips">
-        {/* key ayuda a React a identificar cada elemento de la lista */}
         {HABILIDADES.map((h) => (
           <li key={h} className="chip">{h}</li>
         ))}
@@ -124,11 +123,8 @@ function Habilidades() {
 function EnlaceRepos({ repos: todos = [] }) {
   const repos = todos.filter((r) => r.url);
   const [abierto, setAbierto] = useState(false);
-  // useRef guarda una referencia al <div> para saber si el click fue dentro o fuera.
   const contenedor = useRef(null);
 
-  // Cerramos el menú al hacer click fuera o al presionar Escape,
-  // para que no quede abierto tapando otras tarjetas.
   useEffect(() => {
     if (!abierto) return;
     const cerrarSiFuera = (e) => {
@@ -137,7 +133,7 @@ function EnlaceRepos({ repos: todos = [] }) {
     const cerrarConEscape = (e) => e.key === "Escape" && setAbierto(false);
     document.addEventListener("mousedown", cerrarSiFuera);
     document.addEventListener("keydown", cerrarConEscape);
-    // La función que devuelve useEffect limpia los listeners al cerrar el menú.
+
     return () => {
       document.removeEventListener("mousedown", cerrarSiFuera);
       document.removeEventListener("keydown", cerrarConEscape);
@@ -146,7 +142,6 @@ function EnlaceRepos({ repos: todos = [] }) {
 
   if (repos.length === 0) return null;
 
-  // Con un solo repo no hace falta menú: mostramos un link normal.
   if (repos.length === 1) {
     return (
       <a href={repos[0].url} target="_blank" rel="noreferrer">Código</a>
@@ -217,13 +212,11 @@ function Proyectos() {
 }
 
 function Contacto() {
-  // Estado del formulario: React controla lo que el usuario escribe.
   const [form, setForm] = useState({ nombre: "", mensaje: "" });
 
   const manejarCambio = (e) =>
     setForm({ ...form, [e.target.name]: e.target.value });
 
-  // Sin backend: abrimos el cliente de correo con el mensaje armado.
   const enviar = (e) => {
     e.preventDefault();
     const asunto = encodeURIComponent(`Contacto desde tu portafolio: ${form.nombre}`);
