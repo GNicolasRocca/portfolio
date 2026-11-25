@@ -72,14 +72,14 @@ const PROYECTOS = [
   {
     id: 5,
     titulo: "FTecommerce",
-    descripcion: "Esta es una API construida con Nest para Fix It Ecommerce",
+    descripcion: "Esta es una API construida con Nest y con documentación hecha en Swagger para Fix It Ecommerce",
     tecnologias: [
       "TypeScript", "NestJS", "PostgreSQL", "TypeORM", "NodeJS", "JWT", "Swagger", "pgAdmin", "Jest", "Docker", "GitHub Actions"
     ],
     repos: [
       { etiqueta: "Backend", url: "https://github.com/GNicolasRocca/FTecommerce" },
     ],
-    demo: "linkedin.com/safety/go/?url=https%3A%2F%2Fnest-demo-latest-8yd5.onrender.com%2Fapi&urlhash=pi2r&mt=Pqidn8uj5aHFKr7S3a5iFhf-bvryiB6UcaB9RepUe3nG9F5hsuvObG6BTDWDKSVeahug-Fp1b1GDc6vVvO6saYMUjCRZ&isSdui=true&lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base%3B77svcWi%2BQsuN4GkNrEWyFQ%3D%3D",
+    demo: "https://nest-demo-latest-8yd5.onrender.com/api",
   },
   {
     id: 6,
